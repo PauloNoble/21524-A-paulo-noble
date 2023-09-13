@@ -10,7 +10,7 @@ const Publicacion = sequelize.define('Publicacion', {
         type: DataTypes.STRING(255),
         allowNull: false
     },
-    detalle: {
+    descripcion: {
         type: DataTypes.STRING(255),
         allowNull: false
     },
