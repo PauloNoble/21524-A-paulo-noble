@@ -10,13 +10,13 @@ const Publicacion = sequelize.define('Publicacion', {
         type: DataTypes.STRING(255),
         allowNull: false
     },
-    descripcion: {
+    detalle: {
         type: DataTypes.STRING(255),
         allowNull: false
     },
     url_imagen: {
         type: DataTypes.STRING(255),
-        allowNull: true,
+        allowNull: true
     },
     fecha_publicacion: {
         type: DataTypes.DATE,

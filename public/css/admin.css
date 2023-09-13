@@ -7,4 +7,7 @@
 body {
     display: grid;
     grid-template-rows: auto auto 1fr auto;
+    background-image: url(diseno-en-la-naturaleza-entrada.jpg) ;
+    background-repeat:inherit;
+    background-size: cover;  
 }
