@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 13-09-2023 a las 08:35:36
+-- Tiempo de generación: 26-09-2023 a las 07:14:48
 -- Versión del servidor: 10.4.24-MariaDB
 -- Versión de PHP: 8.1.6
 
@@ -32,18 +32,22 @@ CREATE TABLE `publicaciones` (
   `titulo` varchar(255) NOT NULL,
   `detalle` varchar(255) NOT NULL,
   `url_imagen` varchar(255) NOT NULL,
-  `fecha_publicacion` datetime NOT NULL DEFAULT current_timestamp()
+  `fecha_publicacion` datetime NOT NULL DEFAULT current_timestamp(),
+  `autor` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `publicaciones`
 --
 
-INSERT INTO `publicaciones` (`id`, `titulo`, `detalle`, `url_imagen`, `fecha_publicacion`) VALUES
-(4, 'Lago sin nombre', 'prueba 1', 'https://historiadelavida.azurewebsites.net/wp-content/uploads/2017/05/diseno-en-la-naturaleza-entrada.jpg', '0000-00-00 00:00:00'),
-(5, 'Lago sin nombre 2', 'prueba 3', 'https://elcomercio.pe/resizer/mUe0JWEmNr4dO1H5TWgxUjbbGsE=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/4QNBZB6RLRFLBCKWXBH2SAP2W4.jpg', '2023-09-14 00:00:00'),
-(6, 'Lago sin nombre 2', 'n;snl;f;\'s;\'m\'s', 'https://elcomercio.pe/resizer/mUe0JWEmNr4dO1H5TWgxUjbbGsE=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/4QNBZB6RLRFLBCKWXBH2SAP2W4.jpg', '0000-00-00 00:00:00'),
-(7, 'Lago sin nombre', '1616\n161\n161\n1', 'https://elcomercio.pe/resizer/mUe0JWEmNr4dO1H5TWgxUjbbGsE=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/4QNBZB6RLRFLBCKWXBH2SAP2W4.jpg', '0000-00-00 00:00:00');
+INSERT INTO `publicaciones` (`id`, `titulo`, `detalle`, `url_imagen`, `fecha_publicacion`, `autor`) VALUES
+(4, 'Lago sin nombre', 'prueba 1', 'https://historiadelavida.azurewebsites.net/wp-content/uploads/2017/05/diseno-en-la-naturaleza-entrada.jpg', '0000-00-00 00:00:00', ''),
+(5, 'Lago sin nombre 2', 'prueba 3', 'https://elcomercio.pe/resizer/mUe0JWEmNr4dO1H5TWgxUjbbGsE=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/4QNBZB6RLRFLBCKWXBH2SAP2W4.jpg', '2023-09-14 00:00:00', ''),
+(6, 'Lago sin nombre 2', 'n;snl;f;\'s;\'m\'s', 'https://elcomercio.pe/resizer/mUe0JWEmNr4dO1H5TWgxUjbbGsE=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/4QNBZB6RLRFLBCKWXBH2SAP2W4.jpg', '0000-00-00 00:00:00', ''),
+(7, 'Lago sin nombre', '1616\n161\n161\n1', 'https://elcomercio.pe/resizer/mUe0JWEmNr4dO1H5TWgxUjbbGsE=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/4QNBZB6RLRFLBCKWXBH2SAP2W4.jpg', '0000-00-00 00:00:00', ''),
+(8, 'Prueba 1', 'prueba de cambio de identificador de boton', 'https://historiadelavida.azurewebsites.net/wp-content/uploads/2017/05/diseno-en-la-naturaleza-entrada.jpg', '2023-09-16 00:00:00', ''),
+(9, 'prueba de creacion', 'probando si se crea nueva publicacion', 'https://elcomercio.pe/resizer/mUe0JWEmNr4dO1H5TWgxUjbbGsE=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/4QNBZB6RLRFLBCKWXBH2SAP2W4.jpg', '2023-09-17 00:00:00', ''),
+(11, 'prueba de creacion', 'prueba de creacion de post con autor 1', 'https://elcomercio.pe/resizer/mUe0JWEmNr4dO1H5TWgxUjbbGsE=/1200x900/smart/filters:format(jpeg):quality(75)/cloudfront-us-east-1.images.arcpublishing.com/elcomercio/4QNBZB6RLRFLBCKWXBH2SAP2W4.jpg', '2023-09-26 00:00:00', 'Paulo Noble');
 
 --
 -- Índices para tablas volcadas
@@ -63,7 +67,7 @@ ALTER TABLE `publicaciones`
 -- AUTO_INCREMENT de la tabla `publicaciones`
 --
 ALTER TABLE `publicaciones`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
