@@ -12,10 +12,15 @@ body {
 h1 {
     font-family:Georgia, 'Times New Roman', Times, serif;
     color: rgb(146, 142, 194);
+    text-decoration: underline;
 }
 
 section {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
     font-style: oblique;
     color: rgb(226, 226, 233);
+}
+
+h4 {
+    font-style: italic;
 }

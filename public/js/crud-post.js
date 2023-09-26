@@ -36,9 +36,10 @@ export const mostrarDatosPublicaciones = (publicaciones, elemento) => {
             <section class="d-flex gap-4">
                 <img src="${pub.url_imagen}" class="rounded" height="200" width="400" id:"imagen">
                 <div class="d-flex flex-column justify-content-between">
-                    <h3 id:"titulo-publicacion">${pub.titulo}</h3>
+                    <h2 id:"titulo-publicacion">${pub.titulo}</h2>
                     <p id:"detalle">${pub.detalle}</p>
                     <p>${pub.fecha_publicacion}</p>
+                    <h4 id:"autor">${pub.autor}</h4>
                 </div>
             </section>
         `
